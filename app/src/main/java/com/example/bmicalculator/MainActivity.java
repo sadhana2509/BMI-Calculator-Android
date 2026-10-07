@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button calculateButton;
     TextView resultText;
 
-    @SuppressLint({"SetTextI18n", "DefaultLocale"})
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 category = "Obese";
             }
 
+            resultText.setText(String.format("BMI: %.2f\nCategory: %s", bmi, category));
         });
     }
 }
